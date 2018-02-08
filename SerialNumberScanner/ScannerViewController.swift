@@ -20,7 +20,8 @@ class ScannerViewController: UIViewController {
     @IBOutlet private weak var captureView: UIView!
     @IBOutlet private weak var line: UIView!
 
-    @IBOutlet weak var flashlightButton: UIButton!
+    @IBOutlet private weak var flashlightButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,13 +45,19 @@ class ScannerViewController: UIViewController {
 }
 
 extension ScannerViewController {
-    func turnFlashlight() {
+    private func turnFlashlight(_ on: AVCaptureDevice.TorchMode? = nil) {
         guard let captureDevice = AVCaptureDevice.default(for: .video) else { return }
-        let on = (captureDevice.torchMode == .on) ? AVCaptureDevice.TorchMode.off : .on
+
+        var torchOn: AVCaptureDevice.TorchMode!
+        if let on = on {
+            torchOn = on
+        } else {
+            torchOn = (captureDevice.torchMode == .on) ? AVCaptureDevice.TorchMode.off : .on
+        }
 
         do {
             try captureDevice.lockForConfiguration()
-            captureDevice.torchMode = on
+            captureDevice.torchMode = torchOn
             captureDevice.unlockForConfiguration()
         } catch {
             print(error)
@@ -99,22 +106,34 @@ extension ScannerViewController {
 
         maskView.layer.mask = shapeLayer
     }
+
 }
 
 extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-
         if metadataObjects.isEmpty {
             line.isHidden = true
 
             return
         }
 
-        if let metadataObj = metadataObjects.first as? AVMetadataMachineReadableCodeObject,
-            let s = metadataObj.stringValue, 12...13 ~= s.count {
+        if let metadataObj = metadataObjects.first as? AVMetadataMachineReadableCodeObject, var s = metadataObj.stringValue, 12...13 ~= s.count {
+            captureSession.stopRunning()
+            turnFlashlight(.off)
+
             if let codeObject = videoPreviewLayer.transformedMetadataObject(for: metadataObj) {
                 line.isHidden = false
                 line.frame = cameraView.convert(codeObject.bounds, to: captureView)
+            }
+
+            if s.count == 13 && (s.first == "S" || s.first == "s") {
+                s.removeFirst()
+            }
+
+            SNModel.shared.newSN = s
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+                self?.dismiss(animated: true, completion: nil)
             }
 
             print(metadataObj.type, s)

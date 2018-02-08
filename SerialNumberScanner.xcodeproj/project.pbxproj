@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E02D8D7202CA02F007B1186 /* SNModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E02D8D6202CA02F007B1186 /* SNModel.swift */; };
+		6E02D8DA202CACE4007B1186 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E02D8D9202CACE4007B1186 /* DesignableView.swift */; };
 		6E7313D1202AA79B00358DD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7313D0202AA79B00358DD6 /* AppDelegate.swift */; };
-		6E7313D3202AA79B00358DD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7313D2202AA79B00358DD6 /* ViewController.swift */; };
+		6E7313D3202AA79B00358DD6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7313D2202AA79B00358DD6 /* MainViewController.swift */; };
 		6E7313D6202AA79B00358DD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E7313D4202AA79B00358DD6 /* Main.storyboard */; };
 		6E7313D8202AA79B00358DD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E7313D7202AA79B00358DD6 /* Assets.xcassets */; };
 		6E7313DB202AA79B00358DD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E7313D9202AA79B00358DD6 /* LaunchScreen.storyboard */; };
@@ -17,9 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E02D8D6202CA02F007B1186 /* SNModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNModel.swift; sourceTree = "<group>"; };
+		6E02D8D9202CACE4007B1186 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		6E7313CD202AA79B00358DD6 /* SerialNumberScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SerialNumberScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7313D0202AA79B00358DD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6E7313D2202AA79B00358DD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6E7313D2202AA79B00358DD6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6E7313D5202AA79B00358DD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E7313D7202AA79B00358DD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E7313DA202AA79B00358DD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,12 +64,14 @@
 			children = (
 				6E7313D0202AA79B00358DD6 /* AppDelegate.swift */,
 				6E7313D4202AA79B00358DD6 /* Main.storyboard */,
-				6E7313D2202AA79B00358DD6 /* ViewController.swift */,
+				6E7313D2202AA79B00358DD6 /* MainViewController.swift */,
 				6E7313E2202ABC7300358DD6 /* ScannerViewController.swift */,
 				6E7313E4202ABD3600358DD6 /* SoldDeviceTableViewController.swift */,
+				6E02D8D6202CA02F007B1186 /* SNModel.swift */,
 				6E7313D7202AA79B00358DD6 /* Assets.xcassets */,
 				6E7313D9202AA79B00358DD6 /* LaunchScreen.storyboard */,
 				6E7313DC202AA79B00358DD6 /* Info.plist */,
+				6E02D8D9202CACE4007B1186 /* DesignableView.swift */,
 			);
 			path = SerialNumberScanner;
 			sourceTree = "<group>";
@@ -159,7 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E7313D3202AA79B00358DD6 /* ViewController.swift in Sources */,
+				6E02D8D7202CA02F007B1186 /* SNModel.swift in Sources */,
+				6E7313D3202AA79B00358DD6 /* MainViewController.swift in Sources */,
+				6E02D8DA202CACE4007B1186 /* DesignableView.swift in Sources */,
 				6E7313E3202ABC7300358DD6 /* ScannerViewController.swift in Sources */,
 				6E7313D1202AA79B00358DD6 /* AppDelegate.swift in Sources */,
 				6E7313E5202ABD3600358DD6 /* SoldDeviceTableViewController.swift in Sources */,
