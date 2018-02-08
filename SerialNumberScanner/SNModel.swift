@@ -15,4 +15,6 @@ class SNModel {
 
     var data = Set<String>()
     var newSN: String?
+
+    var historyData = Set<String>()
 }

@@ -33,10 +33,16 @@ class MainViewController: UIViewController {
     }
 
     @IBAction private func submitButtonTouched(_ sender: UIButton) {
+        SNModel.shared.data.forEach {
+            SNModel.shared.historyData.insert($0)
+        }
+        SNModel.shared.data = []
+
         submitButtonEnabled = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
             self?.showAlert("假装上传成功了！")
-            self?.submitButtonEnabled = true
+
+            self?.reloadStackView()
         }
     }
 
@@ -63,10 +69,11 @@ extension MainViewController {
 
     private func checkNewSN() {
         if let sn = SNModel.shared.newSN {
-            if SNModel.shared.data.contains(sn) {
-                showAlert("你已经添加过此设备了哦")
+            submitButtonEnabled = true
+            if SNModel.shared.historyData.contains(sn) || SNModel.shared.data.contains(sn) {
+                showAlert("此设备曾经添加过哦")
             } else if SNModel.shared.data.count >= 5 {
-                showAlert("不知为什么最多只能添加5台设备")
+                showAlert("不知为什么一次只能最多添加5台")
             } else {
                 SNModel.shared.data.insert(sn)
                 reloadStackView()

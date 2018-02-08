@@ -11,6 +11,7 @@
 		6E02D8DA202CACE4007B1186 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E02D8D9202CACE4007B1186 /* DesignableView.swift */; };
 		6E02D8DC202CAE1D007B1186 /* DeviceListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E02D8DB202CAE1D007B1186 /* DeviceListView.xib */; };
 		6E02D8DE202CAE2C007B1186 /* DeviceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E02D8DD202CAE2C007B1186 /* DeviceListView.swift */; };
+		6E02D8E1202CB889007B1186 /* SoldDeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E02D8E0202CB889007B1186 /* SoldDeviceTableViewCell.swift */; };
 		6E7313D1202AA79B00358DD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7313D0202AA79B00358DD6 /* AppDelegate.swift */; };
 		6E7313D3202AA79B00358DD6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7313D2202AA79B00358DD6 /* MainViewController.swift */; };
 		6E7313D6202AA79B00358DD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E7313D4202AA79B00358DD6 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		6E02D8D9202CACE4007B1186 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		6E02D8DB202CAE1D007B1186 /* DeviceListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceListView.xib; sourceTree = "<group>"; };
 		6E02D8DD202CAE2C007B1186 /* DeviceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListView.swift; sourceTree = "<group>"; };
+		6E02D8E0202CB889007B1186 /* SoldDeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoldDeviceTableViewCell.swift; sourceTree = "<group>"; };
 		6E7313CD202AA79B00358DD6 /* SerialNumberScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SerialNumberScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7313D0202AA79B00358DD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E7313D2202AA79B00358DD6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 			children = (
 				6E02D8DB202CAE1D007B1186 /* DeviceListView.xib */,
 				6E02D8DD202CAE2C007B1186 /* DeviceListView.swift */,
+				6E02D8E0202CB889007B1186 /* SoldDeviceTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				6E02D8DE202CAE2C007B1186 /* DeviceListView.swift in Sources */,
 				6E02D8DA202CACE4007B1186 /* DesignableView.swift in Sources */,
 				6E7313E3202ABC7300358DD6 /* ScannerViewController.swift in Sources */,
+				6E02D8E1202CB889007B1186 /* SoldDeviceTableViewCell.swift in Sources */,
 				6E7313D1202AA79B00358DD6 /* AppDelegate.swift in Sources */,
 				6E7313E5202ABD3600358DD6 /* SoldDeviceTableViewController.swift in Sources */,
 			);

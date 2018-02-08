@@ -118,8 +118,8 @@ extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
         }
 
         if let metadataObj = metadataObjects.first as? AVMetadataMachineReadableCodeObject, var s = metadataObj.stringValue, 12...13 ~= s.count {
-            captureSession.stopRunning()
             turnFlashlight(.off)
+            captureSession.stopRunning()
 
             if let codeObject = videoPreviewLayer.transformedMetadataObject(for: metadataObj) {
                 line.isHidden = false
