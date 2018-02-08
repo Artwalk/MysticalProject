@@ -74,17 +74,30 @@
                                 <state key="normal" title="提交">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CyV-8s-quR"/>
+                                </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="G7c-8s-Rh8">
+                                <rect key="frame" x="30" y="358" width="315" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" constant="350" id="B6f-sw-dcH"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="o6b-aW-b5T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="12M-ea-uF4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G7c-8s-Rh8" secondAttribute="trailing" constant="30" id="2d2-Cz-Osv"/>
                             <constraint firstItem="Nkq-SR-2tP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Qq-i6-cwY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="o6b-aW-b5T" secondAttribute="bottom" id="Bc4-z8-iqt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qVm-CJ-32n" secondAttribute="trailing" id="IjU-mm-r1O"/>
+                            <constraint firstItem="o6b-aW-b5T" firstAttribute="top" relation="greaterThanOrEqual" secondItem="G7c-8s-Rh8" secondAttribute="bottom" constant="20" id="PoI-ai-GRM"/>
                             <constraint firstItem="nrH-Mf-c0t" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="TET-Ak-cws"/>
+                            <constraint firstItem="G7c-8s-Rh8" firstAttribute="top" secondItem="qVm-CJ-32n" secondAttribute="bottom" constant="20" id="UhR-2w-0In"/>
                             <constraint firstItem="qVm-CJ-32n" firstAttribute="top" secondItem="nrH-Mf-c0t" secondAttribute="bottom" constant="20" id="WLf-nX-J7I"/>
                             <constraint firstItem="nrH-Mf-c0t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ZKn-px-fhJ"/>
+                            <constraint firstItem="G7c-8s-Rh8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="ZS3-Im-Rr1"/>
                             <constraint firstItem="qVm-CJ-32n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fGU-bj-9TN"/>
                             <constraint firstAttribute="trailing" secondItem="Nkq-SR-2tP" secondAttribute="trailing" id="gNi-Xk-fCn"/>
                             <constraint firstAttribute="bottom" secondItem="Nkq-SR-2tP" secondAttribute="bottom" id="l6b-OR-NO2"/>
@@ -101,6 +114,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="stackView" destination="G7c-8s-Rh8" id="ETd-lH-gIb"/>
+                        <outlet property="submitButton" destination="o6b-aW-b5T" id="dX7-A4-86E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6E02D8D7202CA02F007B1186 /* SNModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E02D8D6202CA02F007B1186 /* SNModel.swift */; };
 		6E02D8DA202CACE4007B1186 /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E02D8D9202CACE4007B1186 /* DesignableView.swift */; };
+		6E02D8DC202CAE1D007B1186 /* DeviceListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E02D8DB202CAE1D007B1186 /* DeviceListView.xib */; };
+		6E02D8DE202CAE2C007B1186 /* DeviceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E02D8DD202CAE2C007B1186 /* DeviceListView.swift */; };
 		6E7313D1202AA79B00358DD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7313D0202AA79B00358DD6 /* AppDelegate.swift */; };
 		6E7313D3202AA79B00358DD6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7313D2202AA79B00358DD6 /* MainViewController.swift */; };
 		6E7313D6202AA79B00358DD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E7313D4202AA79B00358DD6 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		6E02D8D6202CA02F007B1186 /* SNModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNModel.swift; sourceTree = "<group>"; };
 		6E02D8D9202CACE4007B1186 /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		6E02D8DB202CAE1D007B1186 /* DeviceListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceListView.xib; sourceTree = "<group>"; };
+		6E02D8DD202CAE2C007B1186 /* DeviceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListView.swift; sourceTree = "<group>"; };
 		6E7313CD202AA79B00358DD6 /* SerialNumberScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SerialNumberScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7313D0202AA79B00358DD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E7313D2202AA79B00358DD6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E02D8DF202CAE32007B1186 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6E02D8DB202CAE1D007B1186 /* DeviceListView.xib */,
+				6E02D8DD202CAE2C007B1186 /* DeviceListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		6E7313C4202AA79B00358DD6 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +75,7 @@
 		6E7313CF202AA79B00358DD6 /* SerialNumberScanner */ = {
 			isa = PBXGroup;
 			children = (
+				6E02D8DF202CAE32007B1186 /* Views */,
 				6E7313D0202AA79B00358DD6 /* AppDelegate.swift */,
 				6E7313D4202AA79B00358DD6 /* Main.storyboard */,
 				6E7313D2202AA79B00358DD6 /* MainViewController.swift */,
@@ -138,6 +152,7 @@
 			files = (
 				6E7313DB202AA79B00358DD6 /* LaunchScreen.storyboard in Resources */,
 				6E7313D8202AA79B00358DD6 /* Assets.xcassets in Resources */,
+				6E02D8DC202CAE1D007B1186 /* DeviceListView.xib in Resources */,
 				6E7313D6202AA79B00358DD6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +182,7 @@
 			files = (
 				6E02D8D7202CA02F007B1186 /* SNModel.swift in Sources */,
 				6E7313D3202AA79B00358DD6 /* MainViewController.swift in Sources */,
+				6E02D8DE202CAE2C007B1186 /* DeviceListView.swift in Sources */,
 				6E02D8DA202CACE4007B1186 /* DesignableView.swift in Sources */,
 				6E7313E3202ABC7300358DD6 /* ScannerViewController.swift in Sources */,
 				6E7313D1202AA79B00358DD6 /* AppDelegate.swift in Sources */,
