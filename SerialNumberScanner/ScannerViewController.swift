@@ -86,7 +86,7 @@ extension ScannerViewController {
         let output = AVCaptureMetadataOutput()
         output.setMetadataObjectsDelegate(self, queue: .main)
         captureSession?.addOutput(output)
-        output.metadataObjectTypes = [.code128]
+        output.metadataObjectTypes = [.code128, .code39, .code93, .code39Mod43, .ean8, .ean13]
 
         captureSession.startRunning()
 
